@@ -1,6 +1,7 @@
 package com.zaid.databinding.ui
 
 import android.content.Context
+import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Bundle
@@ -16,6 +17,7 @@ import androidx.lifecycle.ViewModelProviders
 import com.zaid.databinding.R
 import com.zaid.databinding.data.Popularity
 import com.zaid.databinding.data.SimpleViewModel
+import com.zaid.databinding.fragement.MainActivity
 
 class PlainOldActivity :  AppCompatActivity() {
 
@@ -90,5 +92,10 @@ class PlainOldActivity :  AppCompatActivity() {
                 ContextCompat.getDrawable(context, R.drawable.ic_whatshot_black_96dp)
             }
         }
+    }
+
+    fun NewAct(view: android.view.View) {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 }
